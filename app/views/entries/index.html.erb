@@ -1,14 +1,21 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Entries</h1>
-
-<div id="entries">
+<% content_for :title do %>
+  Foodlog &ndash; <%= DateTime.now.strftime("%B %e, %Y") %>
+<%end%>
+<div class="columns mt-6 is-centered">
   <% @entries.each do |entry| %>
-    <%= render entry %>
-    <p>
-      <%= link_to "Show this entry", entry %>
-    </p>
+    <div class="column is-one-quarter">
+      <div class="card">
+        <%= render entry %>
+      <div class="card-footer">
+          <%= link_to "Show", entry, class: "card-footer-item" %>
+          <%= link_to "Edit", edit_entry_path(entry), class: "card-footer-item" %>
+          <%= link_to "Delete", entry_path(entry), data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}, class: "card-footer-item" %>
+      </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New entry", new_entry_path %>
+<div class="columns is-centered mt-6">
+  <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined"%>
+</div>

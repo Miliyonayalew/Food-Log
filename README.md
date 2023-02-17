@@ -35,6 +35,9 @@
 
 **[Food log]** is an app that is intended for Rails learning purposes from `Traversy` media and that used to track your daily food intake. It allows you to create a new food item, edit it, and delete it. It also allows you to create a new meal, edit it, and delete it. You can also add a food item to a meal type or categories and remove it from a meal. You can also see the total calories,carbohydrates, proteins fats of a meal.
 
+![image](https://user-images.githubusercontent.com/35680940/219803572-8aea013c-8a60-4af0-a52d-d3f97df3d8bc.png)
+
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>

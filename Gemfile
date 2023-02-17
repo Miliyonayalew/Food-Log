@@ -73,4 +73,4 @@ end
 
 gem 'sass-rails'
 
-gem "rubocop", "~> 1.45"
+gem 'rubocop', '~> 1.45'

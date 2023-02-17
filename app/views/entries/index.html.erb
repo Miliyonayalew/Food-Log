@@ -1,7 +1,7 @@
 <% content_for :title do %>
   Foodlog &ndash; <%= DateTime.now.strftime("%B %e, %Y") %>
 <%end%>
-<div class="columns mt-6 is-centered">
+<div class="columns mt-6 is-centered is-multiline">
   <% @entries.each do |entry| %>
     <div class="column is-one-quarter">
       <div class="card">
@@ -16,6 +16,6 @@
   <% end %>
 </div>
 
-<div class="columns is-centered mt-6">
+<div class="column has-text-centered mt-6">
   <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined"%>
 </div>
